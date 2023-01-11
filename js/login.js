@@ -11,12 +11,12 @@ const app = Vue.createApp({
         submit(){
             axios.post(`${apiUrl}v2/admin/signin`,this.user)
             .then(res=>{
-                const {token, expired} = res.data;
-                document.cookie = `hexschool=${token}; expires=${expired};`;
+                const {token,expires} = res.data
+                document.cookie =`hexschool=${token}; expires=${expires};`;
                 window.location = 'product.html';
             })
-            .catch(err=> {
-                console.log(err.response)
+            .catch(err=>{
+                alert(`登入失敗，請確認帳號密碼`)
             })
         }
     },
