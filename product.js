@@ -22,7 +22,7 @@ const app = Vue.createApp({
                 this.products = res.data.products;
                 console.log(this.products)
             })
-            .catch(err=> console.log(err.response))
+            .catch(err=> alert('產品載入失敗'))
         }
     },
     created(){

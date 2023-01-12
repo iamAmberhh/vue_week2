@@ -16,7 +16,7 @@ const app = Vue.createApp({
                 window.location = 'product.html';
             })
             .catch(err=> {
-                console.log(err.response)
+                alert('登入失敗')
             })
         }
     },
