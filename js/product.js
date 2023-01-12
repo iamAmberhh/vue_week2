@@ -20,7 +20,6 @@ const app = Vue.createApp({
             axios.get(`${apiUrl}v2/api/${path}/admin/products`)
             .then(res=>{
                 this.products = res.data.products;
-                console.log(this.products)
             })
             .catch(err=> alert('產品載入失敗'))
         }
